@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout Payment</title>
+  <link rel="stylesheet" href="payment.css" />
+  <!-- Stripe JS for Card Payment -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <!-- Khalti Checkout for Khalti Payment -->
+  <script src="https://khalti.com/static/khalti-checkout.js"></script>
+  <script src="payment.js" defer></script>
+</head>
+<body>
+  <div class="payment-container">
+    <h1>Checkout</h1>
+    <!-- Tabs Navigation -->
+    <div class="tabs">
+      <button class="tab-button active" data-tab="card-tab">
+        <img src="https://imgs.search.brave.com/YqgOw2uZ8ejthRoXcld26FWcKdoAja4cIsczwdsrLfg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA4LzU0Lzk1LzU2/LzM2MF9GXzg1NDk1/NTY1N19sRzhkbnNF/YUtob1NHRkg4Q3JT/dTNITFhuMXFUMGd2/cC5qcGc" alt="Card Logo" class="tab-icon" />
+        Debit/Credit Card
+      </button>
+      <button class="tab-button" data-tab="khalti-tab">
+        <img src="https://imgs.search.brave.com/gd2OflLQOLjaw3HyLZGSRZI-JupgPRVSFX8D0m5um3c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzMzLzEva2hhbHRp/LWxvZ28tcG5nX3Nl/ZWtsb2dvLTMzNzk2/Mi5wbmc" alt="Khalti Logo" class="tab-icon" />
+        Khalti
+      </button>
+      <button class="tab-button" data-tab="esewa-tab">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Esewa_logo.webp" alt="eSewa Logo" class="tab-icon" />
+        eSewa
+      </button>
+    </div>
+    <!-- TAB CONTENT: Card Payment -->
+    <div class="tab-content active" id="card-tab">
+      <div class="checkout-wrapper">
+        <!-- Order Summary (Left Column) -->
+        <div class="order-summary" id="order-summary">
+          <h2>Order Summary</h2>
+          <!-- If single product, these IDs will be updated -->
+          <div class="order-item" id="single-order">
+            <img id="order-image" src="https://via.placeholder.com/100" alt="Product Image">
+            <div class="item-details">
+              <h3 id="order-name">Product Name</h3>
+              <p id="order-quantity">Quantity: 1</p>
+              <p id="order-price">Price: $29.99</p>
+            </div>
+          </div>
+          <div class="order-total" id="order-total">
+            <p>Total: $29.99</p>
+          </div>
+        </div>
+        <!-- Delivery & Payment Form (Right Column) -->
+        <div class="delivery-form">
+          <form id="cardPaymentForm">
+            <fieldset>
+              <legend>Delivery Details</legend>
+              <div class="form-row">
+                <label>Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter Your Full Name" required />
+              </div>
+              <div class="form-row">
+                <label>Address</label>
+                <input type="text" id="address" placeholder="Address" required />
+              </div>
+              <div class="form-row">
+                <label>City</label>
+                <input type="text" id="city" placeholder="City" required />
+              </div>
+              <div class="form-row">
+                <label>State</label>
+                <input type="text" id="state" placeholder="State" required />
+              </div>
+              <div class="form-row">
+                <label>ZIP</label>
+                <input type="text" id="zip" placeholder="12345" required />
+              </div>
+              <div class="form-row">
+                <label>Phone</label>
+                <input type="text" id="phone" placeholder="(555) 555-5555" required />
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Payment Details</legend>
+              <!-- Stripe Card Element -->
+              <div id="card-element"></div>
+              <div id="card-errors" role="alert"></div>
+            </fieldset>
+            <button type="submit" class="pay-now-button">Pay with Card</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- TAB CONTENT: Khalti Payment -->
+    <div class="tab-content" id="khalti-tab">
+      <div class="checkout-wrapper">
+        <div class="order-summary" id="khalti-order-summary">
+          <h2>Order Summary</h2>
+          <div class="order-item">
+            <img id="khalti-order-image" src="https://via.placeholder.com/100" alt="Product Image">
+            <div class="item-details">
+              <h3 id="khalti-order-name">Product Name</h3>
+              <p id="khalti-order-quantity">Quantity: 1</p>
+              <p id="khalti-order-price">Price: $29.99</p>
+            </div>
+          </div>
+          <div class="order-total" id="khalti-order-total">
+            <p>Total: $29.99</p>
+          </div>
+        </div>
+        <div class="delivery-form">
+          <form id="khaltiPaymentForm">
+            <fieldset>
+              <legend>Delivery Details</legend>
+              <div class="form-row">
+                <label>Full Name</label>
+                <input type="text" id="khalti_fullName" placeholder="Enter Your Full Name" required />
+              </div>
+              <div class="form-row">
+                <label>Address</label>
+                <input type="text" id="khalti_address" placeholder="Address" required />
+              </div>
+              <div class="form-row">
+                <label>City</label>
+                <input type="text" id="khalti_city" placeholder="City" required />
+              </div>
+              <div class="form-row">
+                <label>State</label>
+                <input type="text" id="khalti_state" placeholder="State" required />
+              </div>
+              <div class="form-row">
+                <label>ZIP</label>
+                <input type="text" id="khalti_zip" placeholder="12345" required />
+              </div>
+              <div class="form-row">
+                <label>Phone</label>
+                <input type="text" id="khalti_phone" placeholder="(555) 555-5555" required />
+              </div>
+            </fieldset>
+            <button type="submit" class="pay-now-button">Pay with Khalti</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- TAB CONTENT: eSewa Payment -->
+    <div class="tab-content" id="esewa-tab">
+      <div class="checkout-wrapper">
+        <div class="order-summary" id="esewa-order-summary">
+          <h2>Order Summary</h2>
+          <div class="order-item">
+            <img id="esewa-order-image" src="https://via.placeholder.com/100" alt="Product Image">
+            <div class="item-details">
+              <h3 id="esewa-order-name">Product Name</h3>
+              <p id="esewa-order-quantity">Quantity: 1</p>
+              <p id="esewa-order-price">Price: $29.99</p>
+            </div>
+          </div>
+          <div class="order-total" id="esewa-order-total">
+            <p>Total: $29.99</p>
+          </div>
+        </div>
+        <div class="delivery-form">
+          <form id="esewaPaymentForm">
+            <fieldset>
+              <legend>Delivery Details</legend>
+              <div class="form-row">
+                <label>Full Name</label>
+                <input type="text" id="esewa_fullName" placeholder="Enter Your Full Name" required />
+              </div>
+              <div class="form-row">
+                <label>Address</label>
+                <input type="text" id="esewa_address" placeholder="Address" required />
+              </div>
+              <div class="form-row">
+                <label>City</label>
+                <input type="text" id="esewa_city" placeholder="City" required />
+              </div>
+              <div class="form-row">
+                <label>State</label>
+                <input type="text" id="esewa_state" placeholder="State" required />
+              </div>
+              <div class="form-row">
+                <label>ZIP</label>
+                <input type="text" id="esewa_zip" placeholder="12345" required />
+              </div>
+              <div class="form-row">
+                <label>Phone</label>
+                <input type="text" id="esewa_phone" placeholder="(555) 555-5555" required />
+              </div>
+            </fieldset>
+            <button type="submit" class="pay-now-button">Pay with eSewa</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

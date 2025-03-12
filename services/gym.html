@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts - Fitness App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="workout.css">
+</head>
+<body>
+    <section class="workouts-container"><br>
+        <br>
+        <h2>Select Your Workout Plan</h2>
+        <div class="workout-grid">
+            <div class="workout-card" onclick="showWorkout('strength')">
+                <img src="strength.jpg" alt="Strength Training">
+                <h3>Strength Training</h3>
+            </div>
+            <div class="workout-card" onclick="showWorkout('cardio')">
+                <img src="cardio.jpg" alt="Cardio">
+                <h3>Cardio Workouts</h3>
+            </div>
+            <div class="workout-card" onclick="showWorkout('yoga')">
+                <img src="yoga.jpg" alt="Yoga & Flexibility">
+                <h3>Yoga & Flexibility</h3>
+            </div>
+            <div class="workout-card" onclick="showWorkout('fullbody')">
+                <img src="full_body.jpg" alt="Full Body">
+                <h3>Full Body Workout</h3>
+            </div>
+        </div>
+    </section>
+    <section class="workout-details" id="workoutDetails">
+        <h2 id="workoutTitle">Select a Workout Plan</h2>
+        <div class="workout-info">
+            <img id="workoutImage" src="plan.jpg" alt="Workout">
+            <div class="workout-description">
+                <h3>What is this workout?</h3>
+                <p id="workoutDesc">Click on a workout plan to see details.</p>
+                <h3>Benefits</h3>
+                <ul id="benefitsList">
+                    <li>Workout benefits will appear here.</li>
+                </ul>
+            </div>
+        </div>
+    </section> 
+
+    <section class="subscription-section" id="subscriptionSection" style="display: none;">
+        <h2 id="subscriptionTitle">Workout Subscription Plans</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Duration</th>
+                    <th>Price</th>
+                    <th>Benefits</th>
+                    <th>Subscribe</th>
+                </tr>
+            </thead>
+            <tbody id="subscriptionBody">
+                <!-- Subscription details will be inserted dynamically -->
+            </tbody>
+        </table>
+    </section>
+    
+    
+
+    <script src="workout.js"></script>
+</body>
+</html>

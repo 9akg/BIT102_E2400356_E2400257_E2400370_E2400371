@@ -1,0 +1,138 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container Layout */
+  .admin-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    width: 250px;
+    background: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .sidebar .logo h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar ul.menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul.menu li {
+    margin: 20px 0;
+  }
+  
+  .sidebar ul.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .sidebar ul.menu li a:hover,
+  .sidebar ul.menu li a.active {
+    color: #00c8ff;
+  }
+  
+  /* Main Content Styling */
+  .main-content {
+    flex: 1;
+    padding: 40px;
+    background: #f4f4f4;
+  }
+  
+  .main-content section {
+    display: none;
+  }
+  
+  .main-content section.active {
+    display: block;
+  }
+  
+  .main-content h1 {
+    margin-bottom: 20px;
+  }
+  
+  .main-content p {
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling */
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background: #00c8ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Buttons */
+  .edit-btn, .delete-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background: #ffc107;
+    color: #fff;
+  }
+  
+  .delete-btn {
+    background: #dc3545;
+    color: #fff;
+  }
+  

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Successful</title>
+  <style>
+    body {
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    .success-box {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+    .success-box h1 {
+      color: #27ae60;
+      margin-bottom: 1rem;
+    }
+    .success-box p {
+      margin-bottom: 1rem;
+    }
+    .back-button {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="success-box">
+    <h1>Payment Successful</h1>
+    <p>Your payment was processed successfully.</p>
+    <p>
+      Order ID:
+      <strong id="orderId">Loading...</strong>
+    </p>
+    <button class="back-button" onclick="goHome()">Back to Home</button>
+  </div>
+
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+    function goHome() {
+      window.location.href = 'index.html';
+    }
+    const orderId = getQueryParam('order_id') || getQueryParam('session_id');
+    document.getElementById('orderId').textContent = orderId || 'N/A';
+  </script>
+</body>
+</html>

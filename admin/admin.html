@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel - Fitness App</title>
+  <link rel="stylesheet" href="admin.css">
+  <!-- Payment and other CSS can be included as needed -->
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>Admin Panel</h2>
+      </div>
+      <ul class="menu">
+        <li><a href="#dashboard" class="active">Dashboard</a></li>
+        <li><a href="#workouts">Manage Workouts</a></li>
+        <li><a href="#subscriptions">Manage Subscriptions</a></li>
+        <li><a href="#users">Manage Users</a></li>
+        <li><a href="#orders">Manage Orders</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Dashboard Section -->
+      <section id="dashboard" class="active">
+        <h1>Dashboard</h1>
+        <p>Welcome to the admin dashboard. Use the sidebar to manage content.</p>
+      </section>
+
+      <!-- Manage Workouts Section -->
+      <section id="workouts">
+        <h1>Manage Workouts</h1>
+        <form id="workoutForm">
+          <label for="workoutTitle">Workout Title:</label>
+          <input type="text" id="workoutTitle" name="workoutTitle" required>
+          
+          <label for="workoutImage">Image URL:</label>
+          <input type="text" id="workoutImage" name="workoutImage" required>
+          
+          <label for="workoutDesc">Description:</label>
+          <textarea id="workoutDesc" name="workoutDesc" required></textarea>
+          
+          <button type="submit">Save Workout</button>
+        </form>
+      </section>
+
+      <!-- Manage Subscriptions Section -->
+      <section id="subscriptions">
+        <h1>Manage Subscriptions</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Workout</th>
+              <th>Plan</th>
+              <th>Duration</th>
+              <th>Price</th>
+              <th>Benefits</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="subscriptionList">
+            <tr>
+              <td>Strength Training</td>
+              <td>Basic</td>
+              <td>1 Month</td>
+              <td>$9.99</td>
+              <td>Access to beginner strength training</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <!-- More rows can be added dynamically -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Manage Users Section -->
+      <section id="users">
+        <h1>Manage Users</h1>
+        <p>User management interface will be here.</p>
+      </section>
+
+      <!-- Manage Orders Section -->
+      <section id="orders">
+        <h1>Manage Orders</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Order Date</th>
+              <th>Total Amount</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="ordersList">
+            <tr>
+              <td>#1001</td>
+              <td>John Doe</td>
+              <td>2024-01-01</td>
+              <td>$49.99</td>
+              <td>Pending</td>
+              <td>
+                <button class="view-btn">View</button>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#1002</td>
+              <td>Jane Smith</td>
+              <td>2024-01-05</td>
+              <td>$79.99</td>
+              <td>Completed</td>
+              <td>
+                <button class="view-btn">View</button>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <!-- Additional order rows can be added dynamically -->
+          </tbody>
+        </table>
+      </section>
+
+      
+
+      <!-- Settings Section -->
+      <section id="settings">
+        <h1>Settings</h1>
+        <p>Admin settings page.</p>
+      </section>
+    </main>
+  </div>
+  
+  <script src="admin.js"></script>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

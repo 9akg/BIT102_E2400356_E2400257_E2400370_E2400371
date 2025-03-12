@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="js/script.js" defer></script>
+</head>
+<body>
+ 
+<header>
+   <div class="cart-icon">
+       <i class="fas fa-shopping-cart"></i>
+       <span class="cart-count">0</span>
+   </div>
+   <h1 class="title">GYM Equipment Store</h1>
+</header>
+<div class="container">
+   <h3 class="title"> Our Products </h3>
+   <div class="products-container">
+      <!-- Existing Products -->
+      <div class="product" data-name="p-1">
+         <img src="images/1.png" alt="">
+         <h3>Protein Powder</h3>
+         <div class="price">$29.99</div>
+      </div>
+      <div class="product" data-name="p-2">
+         <img src="images/2.png" alt="">
+         <h3>Resistance Bands</h3>
+         <div class="price">$19.99</div>
+      </div>
+      <div class="product" data-name="p-3">
+         <img src="images/3.png" alt="">
+         <h3>Yoga Mat</h3>
+         <div class="price">$25.00</div>
+      </div>
+      <div class="product" data-name="p-4">
+         <img src="images/4.png" alt="">
+         <h3>Dumbbell Set</h3>
+         <div class="price">$39.99</div>
+      </div>
+      <div class="product" data-name="p-5">
+         <img src="images/5.png" alt="">
+         <h3>Weight Lifting Gloves</h3>
+         <div class="price">$14.99</div>
+      </div>
+      <div class="product" data-name="p-6">
+         <img src="images/6.png" alt="">
+         <h3>Protein Shaker Bottle</h3>
+         <div class="price">$9.99</div>
+      </div>
+      <!-- New Products (Gym Equipment) -->
+      <div class="product" data-name="p-7">
+         <img src="images/7.png" alt="">
+         <h3>Kettlebell</h3>
+         <div class="price">$34.99</div>
+      </div>
+      <div class="product" data-name="p-8">
+         <img src="images/8.png" alt="">
+         <h3>Jump Rope</h3>
+         <div class="price">$12.99</div>
+      </div>
+      <div class="product" data-name="p-9">
+         <img src="images/9.png" alt="">
+         <h3>Foam Roller</h3>
+         <div class="price">$22.99</div>
+      </div>
+      <div class="product" data-name="p-10">
+         <img src="images/10.png" alt="">
+         <h3>Workout Bench</h3>
+         <div class="price">$89.99</div>
+      </div>
+      <div class="product" data-name="p-11">
+         <img src="images/11.png" alt="">
+         <h3>Powerlifting Belt</h3>
+         <div class="price">$29.99</div>
+      </div>
+      <div class="product" data-name="p-12">
+         <img src="images/12.png" alt="">
+         <h3>Boxing Gloves</h3>
+         <div class="price">$39.99</div>
+      </div>
+      <div class="product" data-name="p-13">
+         <img src="images/13.png" alt="">
+         <h3>Pull-Up Bar</h3>
+         <div class="price">$49.99</div>
+      </div>
+      <div class="product" data-name="p-14">
+         <img src="images/14.png" alt="">
+         <h3>Speed Agility Ladder</h3>
+         <div class="price">$19.99</div>
+      </div>
+      <div class="product" data-name="p-15">
+         <img src="images/15.png" alt="">
+         <h3>Medicine Ball</h3>
+         <div class="price">$24.99</div>
+      </div>
+      <div class="product" data-name="p-16">
+         <img src="images/16.png" alt="">
+         <h3>Adjustable Barbell</h3>
+         <div class="price">$99.99</div>
+      </div>
+      <!-- New Gym Supplement Products -->
+      <div class="product" data-name="p-17">
+         <img src="images/17.png" alt="">
+         <h3>Creatine Monohydrate</h3>
+         <div class="price">$24.99</div>
+      </div>
+      <div class="product" data-name="p-18">
+         <img src="images/18.png" alt="">
+         <h3>BCAA Powder</h3>
+         <div class="price">$19.99</div>
+      </div>
+      <div class="product" data-name="p-19">
+         <img src="images/19.png" alt="">
+         <h3>Pre-Workout Formula</h3>
+         <div class="price">$29.99</div>
+      </div>
+      <div class="product" data-name="p-20">
+         <img src="images/20.png" alt="">
+         <h3>Glutamine Supplement</h3>
+         <div class="price">$22.99</div>
+      </div>
+      <div class="product" data-name="p-21">
+         <img src="images/21.png" alt="">
+         <h3>Mass Gainer</h3>
+         <div class="price">$39.99</div>
+      </div>
+   </div>
+</div>
+
+<div class="products-preview">
+   <!-- Existing Product Previews -->
+   <div class="preview" data-target="p-1">
+      <i class="fas fa-times"></i>
+      <img src="images/1.png" alt="">
+      <h3>Whey Protein Powder</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 500 )</span>
+      </div>
+      <p>High-quality whey protein powder to support muscle growth and recovery.</p>
+      <div class="price">$29.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-2">
+      <i class="fas fa-times"></i>
+      <img src="images/2.png" alt="">
+      <h3>Resistance Bands Set</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 350 )</span>
+      </div>
+      <p>Perfect for full-body workouts and improving strength and flexibility.</p>
+      <div class="price">$19.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-3">
+      <i class="fas fa-times"></i>
+      <img src="images/3.png" alt="">
+      <h3>Non-Slip Yoga Mat</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 450 )</span>
+      </div>
+      <p>Durable and non-slip yoga mat for all levels of yoga and fitness exercises.</p>
+      <div class="price">$25.00</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-4">
+      <i class="fas fa-times"></i>
+      <img src="images/4.png" alt="">
+      <h3>Adjustable Dumbbell Set</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 300 )</span>
+      </div>
+      <p>Adjustable dumbbells for a versatile home workout experience.</p>
+      <div class="price">$39.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-5">
+      <i class="fas fa-times"></i>
+      <img src="images/5.png" alt="">
+      <h3>Weight Lifting Gloves</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 200 )</span>
+      </div>
+      <p>High-quality gloves designed for comfort and grip during weightlifting.</p>
+      <div class="price">$14.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-6">
+      <i class="fas fa-times"></i>
+      <img src="images/6.png" alt="">
+      <h3>Protein Shaker Bottle</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 180 )</span>
+      </div>
+      <p>Convenient protein shaker bottle with a leak-proof lid for easy mixing.</p>
+      <div class="price">$9.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <!-- New Product Previews (Gym Equipment) -->
+   <div class="preview" data-target="p-7">
+      <i class="fas fa-times"></i>
+      <img src="images/7.png" alt="">
+      <h3>Kettlebell</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 400 )</span>
+      </div>
+      <p>Solid cast iron kettlebell for dynamic strength and endurance training.</p>
+      <div class="price">$34.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-8">
+      <i class="fas fa-times"></i>
+      <img src="images/8.png" alt="">
+      <h3>Jump Rope</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 320 )</span>
+      </div>
+      <p>Lightweight jump rope designed for cardio workouts and agility training.</p>
+      <div class="price">$12.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-9">
+      <i class="fas fa-times"></i>
+      <img src="images/9.png" alt="">
+      <h3>Foam Roller</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 280 )</span>
+      </div>
+      <p>High-density foam roller for muscle recovery and improving flexibility.</p>
+      <div class="price">$22.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-10">
+      <i class="fas fa-times"></i>
+      <img src="images/10.png" alt="">
+      <h3>Workout Bench</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 150 )</span>
+      </div>
+      <p>Adjustable workout bench for versatile strength training and cardio workouts.</p>
+      <div class="price">$89.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-11">
+      <i class="fas fa-times"></i>
+      <img src="images/11.png" alt="">
+      <h3>Powerlifting Belt</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 220 )</span>
+      </div>
+      <p>Durable powerlifting belt designed to support heavy lifts and reduce injury.</p>
+      <div class="price">$29.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-12">
+      <i class="fas fa-times"></i>
+      <img src="images/12.png" alt="">
+      <h3>Boxing Gloves</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 310 )</span>
+      </div>
+      <p>High-quality boxing gloves designed for both training and competitive boxing.</p>
+      <div class="price">$39.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-13">
+      <i class="fas fa-times"></i>
+      <img src="images/13.png" alt="">
+      <h3>Pull-Up Bar</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 260 )</span>
+      </div>
+      <p>Sturdy pull-up bar suitable for various door frames, perfect for upper body workouts.</p>
+      <div class="price">$49.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-14">
+      <i class="fas fa-times"></i>
+      <img src="images/14.png" alt="">
+      <h3>Speed Agility Ladder</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 240 )</span>
+      </div>
+      <p>Speed agility ladder designed to improve footwork, balance, and coordination.</p>
+      <div class="price">$19.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-15">
+      <i class="fas fa-times"></i>
+      <img src="images/15.png" alt="">
+      <h3>Medicine Ball</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 330 )</span>
+      </div>
+      <p>Versatile medicine ball for strength, balance, and core training.</p>
+      <div class="price">$24.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-16">
+      <i class="fas fa-times"></i>
+      <img src="images/16.png" alt="">
+      <h3>Adjustable Barbell</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 190 )</span>
+      </div>
+      <p>Adjustable barbell set ideal for progressive strength training and various lifting exercises.</p>
+      <div class="price">$99.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <!-- New Gym Supplement Product Previews -->
+   <div class="preview" data-target="p-17">
+      <i class="fas fa-times"></i>
+      <img src="images/17.png" alt="">
+      <h3>Creatine Monohydrate</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 380 )</span>
+      </div>
+      <p>Pure creatine monohydrate powder to boost strength and muscle performance.</p>
+      <div class="price">$24.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-18">
+      <i class="fas fa-times"></i>
+      <img src="images/18.png" alt="">
+      <h3>BCAA Powder</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 360 )</span>
+      </div>
+      <p>Branched-chain amino acids supplement for muscle recovery and endurance.</p>
+      <div class="price">$19.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-19">
+      <i class="fas fa-times"></i>
+      <img src="images/19.png" alt="">
+      <h3>Pre-Workout Formula</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 420 )</span>
+      </div>
+      <p>Energize your workout with our advanced pre-workout blend.</p>
+      <div class="price">$29.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-20">
+      <i class="fas fa-times"></i>
+      <img src="images/20.png" alt="">
+      <h3>Glutamine Supplement</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 300 )</span>
+      </div>
+      <p>Supports muscle recovery and immune function during intense workouts.</p>
+      <div class="price">$22.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-21">
+      <i class="fas fa-times"></i>
+      <img src="images/21.png" alt="">
+      <h3>Mass Gainer</h3>
+      <div class="price">$39.99</div>
+      <div class="buttons">
+         <a href="#" class="buy">Buy Now</a>
+         <a href="#" class="cart">Add to Cart</a>
+      </div>
+   </div>
+</div>
+
+<div class="cart-panel">
+   <div class="cart-header">
+       <h2>Shopping Cart</h2>
+       <i class="fas fa-times close-cart"></i>
+   </div>
+   <div class="cart-items"></div>
+   <div class="cart-total">
+       Total: $<span>0.00</span>
+   </div>
+   <div class="cart-buttons">
+       <button class="clear-cart">Clear Cart</button>
+       <button class="checkout">Checkout</button>
+   </div>
+</div>
+</body>
+</html>
